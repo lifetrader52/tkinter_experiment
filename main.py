@@ -7,8 +7,8 @@ from db import DatabaseOperator
 
 
 class MainApplication(tk.Frame):
-    def __init__(self, master=None):
-        super().__init__(master)
+    def __init__(self, master=None, width=500, height=500):
+        super().__init__(master,width=width,height=height,borderwidth=5)
         self.master = master
         self.pack()
         self.create_widgets()
@@ -27,5 +27,10 @@ class MainApplication(tk.Frame):
         print("hi there, everyone!")
 
 root = tk.Tk()
-app = MainApplication(master=root)
+app = MainApplication(
+        root,
+        width = 500,
+        height = 500
+    )
+
 app.mainloop()
